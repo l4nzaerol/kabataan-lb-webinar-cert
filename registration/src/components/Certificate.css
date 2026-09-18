@@ -1,0 +1,105 @@
+/* Off-screen fixed-size render — same output on mobile and desktop */
+.certificate-export-host {
+  position: fixed;
+  left: -10000px;
+  top: 0;
+  z-index: -1;
+  width: 1491px;
+  pointer-events: none;
+}
+
+.certificate--fixed {
+  position: relative;
+  width: 1491px;
+  max-width: 1491px;
+  line-height: 1;
+  container-type: inline-size;
+}
+
+.certificate-template {
+  display: block;
+  width: 1491px;
+  height: auto;
+}
+
+/*
+  Name slot is between "presented to" (~38%) and the body copy (~46%).
+  Pin the underline to the bottom of that slot; names grow upward from it.
+*/
+.certificate-name {
+  position: absolute;
+  left: 50%;
+  top: 34.9%;
+  transform: translate(-50%, -100%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: max-content;
+  max-width: 80%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  pointer-events: none;
+}
+
+.certificate-name-text {
+  display: block;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 0.7em 0.1em;
+  border: 0;
+  border-bottom: 0.42cqi solid #0b1c38;
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  font-size: 5.2cqi;
+  font-weight: 700;
+  font-style: normal;
+  color: #0a0a0a;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  white-space: nowrap;
+  text-transform: uppercase;
+  background: transparent;
+  box-shadow: none;
+  -webkit-text-fill-color: #0a0a0a;
+}
+
+.certificate-name--long .certificate-name-text {
+  font-size: 4.4cqi;
+  letter-spacing: 0.04em;
+  padding-bottom: 0.1em;
+}
+
+.certificate-name--xlong .certificate-name-text {
+  font-size: 2.70cqi;
+  letter-spacing: 0.03em;
+  padding-bottom: 0.1em;
+}
+
+.certificate-name--xxlong .certificate-name-text {
+  font-size: 1.9cqi;
+  letter-spacing: 0.02em;
+  padding-bottom: 0.1em;
+}
+
+.certificate-urn {
+  position: absolute;
+  right: 2%;
+  top: 1%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  max-width: 32%;
+  text-align: right;
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  font-size: 1.28cqi;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+  white-space: nowrap;
+  color: #121212;
+  background: transparent;
+  box-shadow: none;
+  pointer-events: none;
+  -webkit-text-fill-color: #121212;
+}
